@@ -12,12 +12,14 @@ Subscription key, Asa Fintech code, Application code and Authorization key are r
 
 StartActivityForResult or registerForActivityResult in compose with next parameters:
 
+```
 val intent = Intent(this@MainActivity, LoginWithAsaActivity::class.java)
 intent.putExtra(LoginWithAsaActivity.SUBSCRIPTION_KEY, "")
 intent.putExtra(LoginWithAsaActivity.ASA_FINTECH_CODE, "")
 intent.putExtra(LoginWithAsaActivity.APPLICATION_CODE, "")
 intent.putExtra(LoginWithAsaActivity.AUTHORIZATION_KEY, "")
 intent.putExtra(LoginWithAsaActivity.LOGIN_URL, "")
+```
 
 Subscription key - which was provided to you by Asa Financial
 Asa Fintech code - the fintech code which you want to use to login
@@ -29,11 +31,13 @@ OnActivityResult you will either get the Activity.RESULT_OK or Activity.RESULT_C
 
 If activity result is Activity.RESULT_OK you will get the following data:
 
+```
 consumerCode.value = data?.getStringExtra(LoginWithAsaActivity.ASA_CONSUMER_CODE) ?: ""
 bearerToken.value = data?.getStringExtra(LoginWithAsaActivity.BEARER_TOKEN) ?: ""
 asaFintechCode.value = data?.getStringExtra(LoginWithAsaActivity.ASA_FINTECH_CODE) ?: ""
 expiryDate.value = data?.getStringExtra(LoginWithAsaActivity.EXPIRY_DATE_FOR_TOKEN) ?: ""
 email.value = data?.getStringExtra(LoginWithAsaActivity.EMAIL) ?: ""
+```
 
 ## License
 
