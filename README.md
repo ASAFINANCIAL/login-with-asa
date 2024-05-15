@@ -27,7 +27,7 @@ Application code - the application code which was provided to you by Asa Financi
 Authorization key - the authorization key which was provided to you by Asa Financial
 Login URL - optional if you want to use specific ASA login URL
 
-OnActivityResult you will either get the Activity.RESULT_OK or Activity.RESULT_CANCELED
+In OnActivityResult you will either get the Activity.RESULT_OK or Activity.RESULT_CANCELED
 
 If activity result is Activity.RESULT_OK you will get the following data:
 
